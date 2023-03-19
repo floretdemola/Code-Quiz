@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Quiz</title>
+        <link rel="stylesheet" type ="text/css" href="style.css" />
+    </head>
+
+    <body>
+    <div class = "container">
+        <div id="startpage">
+            <h1>This quiz will test your coding knowledge</h1>
+            <h4>Click "Start" to begin</h4>
+            <button id="start-btn">Start</button>
+            <button id="startPageHighscore" onclick="showHighscore()">High Scores</button>
+        </div>
+    
+        <div id="quiz">
+            <div id="timer">Time remaining: </div>
+            <div id="questions"><p>Questions</p></div>
+            <!--div id="answerbtns" class="btn-grid"></div-->
+                <button id="a" onclick="checkAnswer('a')">A</button>
+                <button id="b" onclick="checkAnswer('b')">B</button>
+                <button id="c" onclick="checkAnswer('c')">C</button>
+                <button id="d" onclick="checkAnswer('d')">D</button>
+            <div id="result"></div>
+        </div>
+        <div id="gameover">
+            <div id="finalScore"></div>
+            <input type="text" size = "20" placeholder="Enter your intials for high score" name="initials" id="initials"/>
+            <button id="submitScore-btn">Submit</button>
+        </div>
+            <div id="scoreContainer">
+            <div id="HighScore-page">
+                <div id="highscoreHeader">
+                    <h3>User Initials | </h3> 
+                    <h3> Score</h3>
+                </div>
+                <div id="highscore-initials"></div>
+                <div id="highscore-score"></div>
+            </div>
+            </div>
+        <div id="endGame">
+            <button id="playAgain" onclick="replayQuiz()">Play Again?</button>
+            <button id="clearHighscore" onclick="clearScore()">Clear Highscores</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,237 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+:root {
+    --text: #000000;
+    --bg: #858585;
+    --textqs: #2c2c2c;
+    --btn: #2c2c2c;
+}
+
+html,
+body {
+    padding: 0;
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 36px;
+    line-height: 50px;
+    text-align: center;
+    color: var(--text);
+    margin: 0;
+}
+
+h2 {
+    font-weight: bolder;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    color: var(--text);
+    margin: 0;
+}
+
+h3 {
+    font-weight: bolder;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    color: var(--text);
+    margin: 0;
+    white-space: break-spaces;
+}
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--bg);
+    width: 100vw;
+    height: 100vh;
+  }
+
+p{
+    text-align: center;
+    font-size: large;
+    background-color: white;
+    color: black;
+}
+
+li {
+    padding-bottom: 3px;
+    color: white;
+    text-shadow: 1.5px 1px 3px black;
+    list-style-type: none;
+}
+
+
+input {
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 30px;
+    
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid;
+    cursor: pointer;
+    color: var(--btn);
+}
+
+.btn-grid {
+    display: grid;
+    margin: 20px;
+}
+
+button:hover{
+    border-color: black;
+    color: white;
+    background-color: black;
+    box-shadow: white;
+}
+.container {
+    padding: 30px 40px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 5px;
+    border-width: 1px;
+    max-width: 800px;
+    align-items: center;
+    color: var(--bg);
+    font-size: 18px;
+    text-decoration-color: var(--text);
+}
+
+#startpage{
+    align-items: center;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+}
+
+
+#quiz {
+    display: none;
+    padding: 20px;
+    margin: 0;
+    border: #000000;
+    border-width: 1px;
+    max-width: 800px;
+}
+
+#result {
+    display: none;
+}
+
+/*.btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid;
+    cursor: pointer;
+    color: var(--btn);
+    font-size: 10px;
+}*/
+
+
+#answerbtns{
+    padding: 10px 30px;
+    font-size: large;
+    font-weight: bold;
+}
+
+#choices {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+}
+
+
+#timer {
+    background-color: gray;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: white;
+    text-shadow: .5px .5px black;
+    border: 1px black;
+}
+
+#gameover {
+    display: none;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#highScore{
+    height: 10px;
+}
+
+#HighScore-page {
+    display: none;
+    background: var(--bg);
+    text-align: center;
+    border: solid;
+    border-radius: 10px;
+    text-decoration-color: var(--text);
+}
+
+#highscoreHeader{
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#scoreContainer{
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#intials {
+    margin: 50px;
+    height: 20px;
+}
+
+#highscore-initials{
+    display: inline-block;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+#highscore-score{
+    float: right;
+    padding-right: 10px;
+    font-weight: bolder;
+}
+
+#finalScore{
+    padding-bottom: 10px;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+#endGame{
+    display: none;
+}
