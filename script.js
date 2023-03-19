@@ -95,7 +95,7 @@ function showScore() {
     quiz.style.display = "none";
     clearInterval(timerInterval);
     inputName.value = "";
-    finalScoreEl.innerHTML = "Total Score: " + score + " out of " + questions.length + " correct.";
+    finalScoreEl.innerHTML = "Total Score: " + score + " out of " + questions.length + " correct";
 }
 
 submit.addEventListener("click", function highscore() {
@@ -155,6 +155,7 @@ function replayQuiz() {
     highScoreContainer.style.display = "none";
     gameoverEl.style.display = "none";
     start.style.display = "flex";
+    endGameBtns.style.display = "none";
     timeLeft = 90;
     score = 0;
     currentQuestionIndex = 0;

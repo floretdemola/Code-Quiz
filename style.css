@@ -103,16 +103,17 @@ button:hover{
     box-shadow: white;
 }
 .container {
-    padding: 30px 40px;
-    width: 100vw;
-    height: 100vh;
+    /*padding: 30px 40px;
+    width: 100vw;*/
+    height: 50vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 0 auto;
     border-radius: 5px;
     border-width: 1px;
     max-width: 800px;
     align-items: center;
-    color: var(--bg);
     font-size: 18px;
     text-decoration-color: var(--text);
 }
@@ -122,6 +123,8 @@ button:hover{
     color: var(--text);
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -132,43 +135,34 @@ button:hover{
     border: #000000;
     border-width: 1px;
     max-width: 800px;
+    justify-content: center;
+    align-items: center;
 }
 
 #result {
     display: none;
+    justify-content: center;
+    align-items: center;
 }
 
-/*.btn {
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid;
-    cursor: pointer;
-    color: var(--btn);
-    font-size: 10px;
-}*/
 
-
-#answerbtns{
+#questions {
     padding: 10px 30px;
     font-size: large;
     font-weight: bold;
+    justify-content: center;
+    align-items: center;
 }
 
-#choices {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin:auto;
-}
 
 
 #timer {
     background-color: gray;
     font-weight: bold;
     text-align: center;
-    text-decoration: white;
+    justify-content: center;
+    align-items: center;
+    color: white;
     text-shadow: .5px .5px black;
     border: 1px black;
 }
@@ -178,6 +172,8 @@ button:hover{
     text-align: center;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 #highScore{
@@ -186,6 +182,8 @@ button:hover{
 
 #HighScore-page {
     display: none;
+    justify-content: center;
+    align-items: center;
     background: var(--bg);
     text-align: center;
     border: solid;
@@ -196,6 +194,7 @@ button:hover{
 #highscoreHeader{
     display:flex;
     justify-content: space-around;
+    align-items: center;
     margin-bottom: 20px;
     color: white;
 }
@@ -207,23 +206,30 @@ button:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 #intials {
     margin: 50px;
     height: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 #highscore-initials{
     display: inline-block;
     padding-left: 20px;
     font-weight: bold;
+    justify-content: center;
+    align-items: center;
 }
 
 #highscore-score{
     float: right;
     padding-right: 10px;
     font-weight: bolder;
+    justify-content: center;
+    align-items: center;
 }
 
 #finalScore{
