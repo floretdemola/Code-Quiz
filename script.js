@@ -199,6 +199,6 @@ function checkAnswer (answer) {
     }
 }
 
-//Start quiz
+// Start quiz
 
 startQuizBtn.addEventListener("click", startQuiz);
