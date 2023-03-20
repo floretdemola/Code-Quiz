@@ -29,27 +29,27 @@ var questions = [{
     correctAnswer: "a"
     },
     {
-    question: "Insert Question 2 here",
-    choiceA: "Insert answer",
-    choiceB: "Insert answer",
-    choiceC: "Insert answer",
-    choiceD: "Insert answer",
+    question: "How do you assign an 'id' in the CSS sheet?",
+    choiceA: ".",
+    choiceB: "#",
+    choiceC: "$",
+    choiceD: "//",
     correctAnswer: "b"  
     },
     {
-    question: "Insert Question 3 here",
-    choiceA: "Insert answer",
-    choiceB: "Insert answer",
-    choiceC: "Insert answer",
-    choiceD: "Insert answer",
+    question: "What does HTML stand for?",
+    choiceA: "Hipster Text Makeup Lessons",
+    choiceB: "Hyper Toddlers Manically Language",
+    choiceC: "Hypertext Markup Language",
+    choiceD: "Hydro Turtles Money Laundering",
     correctAnswer: "c"  
     },    
     {
-    question: "Insert Question 4 here",
-    choiceA: "Insert answer",
-    choiceB: "Insert answer",
-    choiceC: "Insert answer",
-    choiceD: "Insert answer",
+    question: "How do you link the Javascript function in HTML?",
+    choiceA: "In either the head or body of the HTML document, add < java >",
+    choiceB: "In either the head or body of the HTML document, add < javascript >",
+    choiceC: "You can't, this is a trick question!",
+    choiceD: "In either the head or body of the HTML document, add < script >",
     correctAnswer: "d"  
     },];
 
@@ -59,6 +59,8 @@ var timeLeft = 90;
 var timerInterval;
 var score = 0;
 var correct;
+
+// Function cycles through the object array containing the quiz questions to generate the questions and answers
 
 function generateQuestion() {
     gameoverEl.style.display = "none";
@@ -72,6 +74,8 @@ function generateQuestion() {
     buttonC.innerHTML = currentQuestion.choiceC;
     buttonD.innerHTML = currentQuestion.choiceD;
 };
+
+// Function starts the timer and quiz
 
 function startQuiz() {
     gameoverEl.style.display = "none";
@@ -90,6 +94,8 @@ function startQuiz() {
     quiz.style.display = "block";
 }
 
+// Function shows the score at the end of quiz or when the timer runs out
+
 function showScore() {
     gameoverEl.style.display = "flex";
     quiz.style.display = "none";
@@ -97,6 +103,10 @@ function showScore() {
     inputName.value = "";
     finalScoreEl.innerHTML = "Total Score: " + score + " out of " + questions.length + " correct";
 }
+
+
+// click function for the submit button. function highscore that saves and stringifies the array of high scores already saved in local stoage
+// Pushes new user name and score into the array we are saving in local storage then shows the high scores.
 
 submit.addEventListener("click", function highscore() {
     if(inputName.value === "") {
@@ -121,6 +131,9 @@ submit.addEventListener("click", function highscore() {
     }
 });
 
+
+// Function to generate high scores from localstorage 
+
 function generateHighscores() {
     displayName.innerHTML = "";
     highscoreDisplay.innerHTML = "";
@@ -133,7 +146,9 @@ function generateHighscores() {
         displayName.appendChild(newNameSpan);
         highscoreDisplay.appendChild(newScoreSpan);
     }
-}
+    }
+
+// Shows highscore page
 
 function showHighscore() {
     start.style.display = "none";
@@ -145,11 +160,15 @@ function showHighscore() {
     generateHighscores();
 }
 
+// clear highscores
+
 function clearScore() {
     window.localStorage.clear();
     displayName.textContent = "";
     highscoreDisplay.textContent = "";
 }
+
+// replays the quiz
 
 function replayQuiz() {
     highScoreContainer.style.display = "none";
@@ -161,6 +180,9 @@ function replayQuiz() {
     currentQuestionIndex = 0;
 }
 
+
+// function to let you know if it is incorrect or correct. If incorrect then the timer will subtract 5 seconds
+
 function checkAnswer (answer) {
     correct = questions[currentQuestionIndex].correctAnswer;
     if (answer === correct && currentQuestionIndex !== finalQuestionsIndex){
@@ -170,15 +192,13 @@ function checkAnswer (answer) {
         generateQuestion();
     } else if (answer !== correct && currentQuestionIndex !== finalQuestionsIndex) {
         alert("Incorrect!");
-        currentQuestionIndex++;
+        currentQuestionIndex++; timeLeft -= 5;
         generateQuestion();
     } else{
         showScore();
     }
 }
 
-var playAgain = document.getElementById("playAgain");
-var clearHighscore = document.getElementById("clearHighscore");
-
+//Start quiz
 
 startQuizBtn.addEventListener("click", startQuiz);
