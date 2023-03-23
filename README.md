@@ -94,7 +94,7 @@ You are required to submit BOTH of the following for review:
 
 * The URL of the GitHub repository, with a unique name and a readme describing the project.
 
-* Photo: 
+* Photo: Homework/apitest/Screen Shot 2023-03-23 at 6.42.40 PM.png
 
 ---
 
