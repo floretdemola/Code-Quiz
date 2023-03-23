@@ -90,9 +90,11 @@ This Challenge is graded based on the following criteria:
 
 You are required to submit BOTH of the following for review:
 
-* The URL of the functional, deployed application.
+* The URL of the functional, deployed application. https://floretdemola.github.io/Code-Quiz/
 
 * The URL of the GitHub repository, with a unique name and a readme describing the project.
+
+* Photo: 
 
 ---
 
